@@ -1,0 +1,52 @@
+<div class="container">
+  <form method="POST" action="/">
+    <div class="d-flex flex-row justify-content-center bg-light mt-5">
+
+      <div class="card" style="width: 20rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+          class="card-img-top" alt="工程師">
+        <div class="card-body text-center">
+
+          <input class="form-check-input" type="radio" name="job" id='engineer' value="engineer" {{#checkJob
+            options 'engineer' }}checked{{/checkJob}}>
+          <h5 class="card-title">工程師</h5>
+
+        </div>
+      </div>
+
+      <div class="card" style="width: 20rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+          class="card-img-top" alt="設計師">
+        <div class="card-body text-center">
+          <input class="form-check-input" type="radio" name="job" id='designer' value="designer" {{#checkJob
+            options 'designer' }}checked{{/checkJob}}>
+          <h5 class="card-title">設計師</h5>
+        </div>
+      </div>
+
+      <div class="card" style="width: 20rem;">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+          class="card-img-top" alt="創業家">
+        <div class="card-body text-center">
+          <input class="form-check-input" type="radio" name="job" id='entrepreneur' value="entrepreneur" {{#checkJob
+            options 'entrepreneur' }}checked{{/checkJob}}>
+          <h5 class="card-title">創業家</h5>
+        </div>
+      </div>
+    </div>
+
+    <!--render button-->
+    <div class="d-flex flex-row justify-content-center">
+      <div class="col-2 p-3 mt-5 text-center">
+        <button type="submit" class="btn btn-success">
+          <h4>產生幹話</h4>
+        </button>
+      </div>
+
+      <!--render result-->
+      <div class="col-7 border p-3 mt-5">
+        <h5>{{#if trashTalk}} {{trashTalk}} {{/if}}</h5>
+      </div>
+    </div>
+  </form>
+</div>
